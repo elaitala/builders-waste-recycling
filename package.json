@@ -1,0 +1,29 @@
+{
+  "name": "bwr-backend",
+  "version": "1.0.0",
+  "description": "Builders Waste Recycling CRM system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaitala/builders-waste-recycling-backend.git"
+  },
+  "keywords": [
+    "builders",
+    "waste",
+    "recycling"
+  ],
+  "author": "Eric Laitala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elaitala/builders-waste-recycling-backend/issues"
+  },
+  "homepage": "https://github.com/elaitala/builders-waste-recycling-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3"
+  }
+}
