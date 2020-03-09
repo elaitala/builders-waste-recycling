@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const app = express();
 
 // ENV File
 require('dotenv').config();
@@ -19,7 +20,11 @@ app.use('/api/v1/:user', (req, res) => {
   res.send('<h1>This is the USER PROFILE</h1>')
 })
 
+// TRAILER Routes
+app.use('/api/v1/trailers', routes.trailers);
 
+// JOB Routes
+app.use('/api/v1/jobs', routes.jobs);
 
 
 app.listen(PORT, () =>
