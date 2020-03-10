@@ -18,6 +18,10 @@ const JobSchema = mongoose.Schema({
     type: String,
     required: [true, 'Address is required'],
   },
+  city: {
+    type: String,
+    required: [true, 'City is required'],
+  },
   long: {
     type: Number,
     // required: [true, 'Left tire is required'],

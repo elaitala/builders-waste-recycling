@@ -4,16 +4,15 @@ const router = express.Router();
 const ctrl = require('../controllers');
 // PATH = '/api/v1/jobs'
 
-// Controller To Show All JOBS
-// router.get('/', ctrl.jobs.showAll);
-// router.get('/city/:id', ctrl.jobs.showcity)
+// CREATE Single JOB
+router.post('/create', ctrl.jobs.create);
 
 // SHOW Single JOB
 // router.get('/:id', ctrl.jobs.show);
 
-// CREATE Single JOB
-// router.get('/user/own_posts', ctrl.jobs.userposts);
-// router.post('/create', ctrl.jobs.create);
+// SHOW All JOBS
+// router.get('/', ctrl.jobs.showAll);
+// router.get('/city/:id', ctrl.jobs.showcity)
 
 // UPDATE Single JOB
 // router.put('/:id', ctrl.jobs.update);
