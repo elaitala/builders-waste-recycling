@@ -77,9 +77,64 @@ const showAll = async (req, res) => {
   };
 };
 
+const update = async (req, res) => {
+  try {
+    console.log('Finding JOB to UPDATE...')
+    let foundJob = await db.Job.findById(req.params.id);
+    console.log('Found JOB to UPDATE...')
+    console.log(foundJob)
+    // if (foundJob._id == req.foundJob._id) {
+      console.log('UPDATING job...');
+      foundJob.jobName = req.body.jobName;
+      foundJob.client = req.body.client;
+      foundJob.location = req.body.location;
+      foundJob.address = req.body.address;
+      foundJob.city = req.body.city;
+      foundJob.long = req.body.long;
+      foundJob.lat = req.body.lat;
+      foundJob.type = req.body.type;
+      foundJob.siteContact = req.body.siteContact;
+      foundJob.trailer = req.body.trailer;
+      foundJob.droppedDate = req.body.droppedDate;
+      foundJob.droppedBy = req.body.droppedBy;
+      foundJob.pickedDate = req.body.pickedDate;
+      foundJob.pickedBy = req.body.pickedBy;
+      foundJob.status = req.body.status;
+      foundJob.price = req.body.price;
+      foundJob.paid = req.body.paid;
+      foundJob.save();
+      const responseObj = {
+        id: foundJob.id,
+        jobName: foundJob.jobName,
+        client: foundJob.client,
+        location: foundJob.location,
+        address: foundJob.address,
+        city: foundJob.city,
+        long: foundJob.long,
+        lat: foundJob.lat,
+        type: foundJob.type,
+        siteContact: foundJob.siteContact,
+        trailer: foundJob.trailer,
+        droppedDate: foundJob.droppedDate,
+        droppedBy: foundJob.droppedBy,
+        pickedDate: foundJob.pickedDate,
+        pickedBy: foundJob.pickedBy,
+        status: foundJob.status,
+        price: foundJob.price,
+        paid: foundJob.paid
+      };
+    // };
+      res.status(200).json(responseObj)
+  } catch (error) {
+    console.log(error)
+    return res.status(500).json({ message: 'Failed to UPDATE...', error: error });
+  };
+};
+
 
 module.exports = {
   create,
   show,
-  showAll
+  showAll,
+  update
 }

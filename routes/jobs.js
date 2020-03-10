@@ -15,7 +15,7 @@ router.get('/', ctrl.jobs.showAll);
 // router.get('/city/:id', ctrl.jobs.showcity)
 
 // UPDATE Single JOB
-// router.put('/:id', ctrl.jobs.update);
+router.put('/:id', ctrl.jobs.update);
 
 // DELETE Single JOB
 // router.delete('/:id', ctrl.jobs.destroy);
