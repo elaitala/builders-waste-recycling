@@ -11,7 +11,7 @@ router.post('/create', ctrl.jobs.create);
 router.get('/:id', ctrl.jobs.show);
 
 // SHOW All JOBS
-// router.get('/', ctrl.jobs.showAll);
+router.get('/', ctrl.jobs.showAll);
 // router.get('/city/:id', ctrl.jobs.showcity)
 
 // UPDATE Single JOB
