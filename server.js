@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
   res.send('<h1>Welcome to BWR</h1>')
 })
 
-app.use('/api/v1/:user', (req, res) => {
-  res.send('<h1>This is the USER PROFILE</h1>')
-})
+// app.use('/api/v1/:user', (req, res) => {
+//   res.send('<h1>This is the USER PROFILE</h1>')
+// })
 
 // TRAILER Routes
 app.use('/api/v1/trailers', routes.trailers);

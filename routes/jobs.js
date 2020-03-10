@@ -8,7 +8,7 @@ const ctrl = require('../controllers');
 router.post('/create', ctrl.jobs.create);
 
 // SHOW Single JOB
-// router.get('/:id', ctrl.jobs.show);
+router.get('/:id', ctrl.jobs.show);
 
 // SHOW All JOBS
 // router.get('/', ctrl.jobs.showAll);

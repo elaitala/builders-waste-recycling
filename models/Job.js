@@ -44,19 +44,19 @@ const JobSchema = mongoose.Schema({
   },
   droppedDate: {
     type: Date,
-    required: [true, 'Dropped date is required'],
+    // required: [true, 'Dropped date is required'],
   },
   droppedBy: {
     type: String,
-    required: [true, 'Dropped by is required'],
+    // required: [true, 'Dropped by is required'],
   },
   pickedDate: {
     type: Date,
-    required: [true, 'Picked date is required'],
+    // required: [true, 'Picked date is required'],
   },
   pickedBy: {
     type: String,
-    required: [true, 'Picked by is required'],
+    // required: [true, 'Picked by is required'],
   },
   status: {
     type: String,
