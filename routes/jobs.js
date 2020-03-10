@@ -18,7 +18,7 @@ router.get('/', ctrl.jobs.showAll);
 router.put('/:id', ctrl.jobs.update);
 
 // DELETE Single JOB
-// router.delete('/:id', ctrl.jobs.destroy);
+router.delete('/:id', ctrl.jobs.destroy);
 
 
 module.exports = router;
