@@ -1,14 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors');
 
 // ENV File
 require('dotenv').config();
 const PORT = process.env.PORT;
 const routes = require('./routes');
 
+
+
 // MIDDLEWARE----------
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // ROUTES--------------

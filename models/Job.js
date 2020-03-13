@@ -4,15 +4,15 @@ const Schema = mongoose.Schema;
 const JobSchema = mongoose.Schema({
   jobName: {
     type: String,
-    required: [true, 'Job name is required'],
+    // required: [true, 'Job name is required'],
   },
   client: {
     type: String,
-    required: [true, 'Manufacturer is required'],
+    required: [true, 'Builder is required'],
   },
   location: {
     type: String,
-    required: [true, 'Location cost is required'],
+    // required: [true, 'Location is required'],
   },
   address: {
     type: String,
@@ -32,15 +32,16 @@ const JobSchema = mongoose.Schema({
   },
   type: {
     type: String,
-    required: [true, 'Type of job is required'],
+    // required: [true, 'Type of job is required'],
   },
   siteContact: {
     type: String,
     required: [true, 'Site contact is required'],
   },
   trailer: {
-    type: Schema.Types.ObjectId,
-    ref: 'Trailer'
+    type: Number,
+    // type: Schema.Types.ObjectId,
+    // ref: 'Trailer'
   },
   droppedDate: {
     type: Date,
@@ -60,7 +61,7 @@ const JobSchema = mongoose.Schema({
   },
   status: {
     type: String,
-    required: [true, 'Status is required'],
+    // required: [true, 'Status is required'],
   },
   price: {
     type: Number,
@@ -68,7 +69,7 @@ const JobSchema = mongoose.Schema({
   },
   paid: {
     type: Boolean,
-    required: [true, 'Paid status is required'],
+    // required: [true, 'Paid status is required'],
   },
   createdAt: {
     type: Date,
